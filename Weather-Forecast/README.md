@@ -49,8 +49,6 @@ Mở trình duyệt tại `http://localhost:5173`.
 ✅ Xem dự báo thời tiết 5 ngày tiếp theo.
 ✅ Giao diện đẹp, sử dụng TailwindCSS.
 
-## 📸 Ảnh minh họa
-(Thêm ảnh chụp màn hình của ứng dụng tại đây)
 
 ## 📜 Giấy phép
 Dự án này được phát hành dưới giấy phép MIT. Bạn có thể tự do sử dụng, sửa đổi và chia sẻ.

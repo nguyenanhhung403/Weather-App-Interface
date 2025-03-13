@@ -1,12 +1,62 @@
-# React + Vite
+# Weather Forecast App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌤 Giới thiệu
+Weather Forecast App là một ứng dụng web giúp người dùng tra cứu thời tiết hiện tại và dự báo 5 ngày tiếp theo của bất kỳ thành phố nào trên thế giới.
 
-Currently, two official plugins are available:
+## 🚀 Công nghệ sử dụng
+- **Frontend:** ReactJS + Vite
+- **CSS Framework:** TailwindCSS
+- **API:** [WeatherAPI](https://www.weatherapi.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Cài đặt và chạy dự án
+### 1️⃣ Clone repository
+```sh
+git clone https://github.com/your-username/weather-forecast.git
+cd weather-forecast
+```
 
-## Expanding the ESLint configuration
+### 2️⃣ Cài đặt dependencies
+```sh
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3️⃣ Cấu hình API Key (Ẩn API Key)
+**⚠️ Không để lộ API Key trên GitHub!**
+
+Tạo file `.env` trong thư mục gốc và thêm:
+```sh
+VITE_WEATHER_API_KEY=your_api_key_here
+```
+Sau đó, trong mã nguồn sử dụng:
+```js
+const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+```
+
+Thêm `.env` vào `.gitignore` để tránh bị push lên GitHub:
+```sh
+echo "\.env" >> .gitignore
+```
+
+### 4️⃣ Chạy ứng dụng
+```sh
+npm run dev
+```
+Mở trình duyệt tại `http://localhost:5173`.
+
+## 🔥 Tính năng chính
+✅ Tìm kiếm thời tiết theo thành phố.
+✅ Xem nhiệt độ hiện tại, điều kiện thời tiết.
+✅ Xem dự báo thời tiết 5 ngày tiếp theo.
+✅ Giao diện đẹp, sử dụng TailwindCSS.
+
+## 📸 Ảnh minh họa
+(Thêm ảnh chụp màn hình của ứng dụng tại đây)
+
+## 📜 Giấy phép
+Dự án này được phát hành dưới giấy phép MIT. Bạn có thể tự do sử dụng, sửa đổi và chia sẻ.
+
+---
+💡 **Contributions** luôn được chào đón! Nếu bạn muốn đóng góp, hãy tạo một pull request hoặc mở một issue.
+
+🚀 **Happy coding!**
+

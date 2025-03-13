@@ -1,0 +1,223 @@
+/* Thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Container chính */
+  .weather-app-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Thanh tìm kiếm */
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .search-container form {
+    display: flex;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .search-container input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .search-container button {
+    padding: 0 25px;
+    background: linear-gradient(to right, #4fc3f7, #2196f3);
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .search-container button:hover {
+    background: linear-gradient(to right, #29b6f6, #1e88e5);
+  }
+  
+  /* Card thời tiết */
+  .weather-card {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .weather-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Backdrop theo điều kiện thời tiết */
+  .weather-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+  }
+  
+  /* Màu sắc dựa trên điều kiện thời tiết */
+  .weather-card.sunny {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+  
+  .weather-card.cloudy {
+    background: linear-gradient(135deg, #5c6bc0, #7986cb);
+  }
+  
+  .weather-card.rainy {
+    background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+  }
+  
+  .weather-card.snowy {
+    background: linear-gradient(135deg, #90caf9, #42a5f5);
+  }
+  
+  .weather-card.foggy {
+    background: linear-gradient(135deg, #b0bec5, #78909c);
+  }
+  
+  .weather-card.default {
+    background: linear-gradient(135deg, #7e57c2, #5e35b1);
+  }
+  
+  /* Header */
+  .weather-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .location-info h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .location-info p {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tabs button {
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .tabs button.active {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+  }
+  
+  .tabs button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Main weather display */
+  .weather-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+  }
+  
+  .temperature-display {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .temperature {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .temperature-unit {
+    font-size: 1.5rem;
+    margin-top: 8px;
+    margin-left: 5px;
+    opacity: 0.8;
+  }
+  
+  .weather-icon-container {
+    text-align: center;
+  }
+  
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  }
+  
+  .weather-condition {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    opacity: 0.9;
+  }
+  
+  /* Weather details */
+  .weather-details {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .detail-item span {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  
+  .detail-item .value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 5px;
+  }
